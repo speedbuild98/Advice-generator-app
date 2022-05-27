@@ -108,6 +108,10 @@ button:hover{
     padding: 0;
   }
 
+  .texto{
+    font-size: 20px;
+  }
+
   #container {
     display: flex;
     align-items: center;
