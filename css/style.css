@@ -1,0 +1,181 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  /*Primary*/
+--Light-Cyan: hsl(193, 38%, 86%);
+--Neon-Green: #0088CC;
+
+ /*Neutral*/
+
+--Grayish-Blue: hsl(217, 19%, 38%);
+--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+--Dark-Blue: hsl(218, 23%, 16%); 
+}
+
+body {
+  background-color: var(--Dark-Blue);
+  color: var(--Light-Cyan);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+}
+
+.container{
+  position: relative;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  padding: 2rem;
+  background-color: var(--Dark-Grayish-Blue);
+}
+
+.titulo{
+  color:var(--Neon-Green);
+  text-align: center;
+	padding: 2rem 1rem 0.5rem 1rem;
+}
+
+.texto{
+  margin: 0;
+	text-align: center;
+	padding: 2rem;
+}
+
+.dado-container{
+  position: absolute;
+	bottom: -5rem;
+	padding: 2rem;
+}
+
+.dado-container button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Neon-Green);
+  padding: 0;
+  margin: 0;
+  border: none;
+  padding: 2rem;
+  border-radius: 50%;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: #0088CC;
+  box-shadow: -2px -2px 30px -2px #0088CC;
+}
+
+.dice-container img{
+  padding: 0;
+  margin: 0;
+}
+
+.dado{
+  background-color:var(--Neon-Green);
+}
+
+.divisor-mobile,
+.divisor{
+  padding: 2rem 2rem 4rem 2rem;
+}
+
+/*RESPONSIVE*/
+
+/*Mobile*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    padding: 0;
+  }
+
+  #container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .divisor-mobile {
+    display: block;
+  }
+
+  .divisor {
+    display: none;
+  }
+}
+
+/*Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+  }
+
+  #container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .divisor-mobile {
+    display: none;
+  }
+
+  .divisor {
+    display: block;
+  }
+}
+
+
+  /*Desktop*/
+  @media (min-width: 992px) {
+    .divisor-mobile {
+      display: none;
+    }
+
+    .divisor {
+      display: block;
+    }
+
+    button:hover {
+      background-color: #0088CC;
+      box-shadow: -2px -2px 30px -2px #0088CC;
+    }
+  }
+
+    @media (max-width: 766px) {
+      .divisor {
+        display: none;
+      }
+    }
